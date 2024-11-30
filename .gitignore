@@ -163,3 +163,7 @@ cython_debug/
 /.vs/PythonApplication_GithubFetchProjects/FileContentIndex/4ccf33fe-a9cd-49c1-a5cd-5ba366f5d546.vsidx
 *.vsidx
 /.vs/PythonApplication_GithubFetchProjects/v17
+
+
+# Custom gitignore
+*.env
