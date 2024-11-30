@@ -14,12 +14,8 @@ def fetch_github_repositories(username):
     except requests.exceptions.RequestException as e:
         print(f"Error fetch data: {e}")
 
-#if __name__ == "__main__":
- #   print("Aplication is running!")
-  #  username = "Yushikuni"
-   # fetch_github_repositories(username)
-
 if __name__ == "__main__":
     print("Runing script...")
-    fetch_github_repositories("Yushikuni")
+    username = "Yushikuni"
+    fetch_github_repositories(username)
 
