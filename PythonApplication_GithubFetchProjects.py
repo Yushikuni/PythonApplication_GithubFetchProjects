@@ -1,14 +1,17 @@
+ï»¿
+
+
 from wsgiref import headers
 import requests
 import os
 from dotenv import load_dotenv
 
-# Naèti promìnné z .env souboru
+# NaÄti promÄ›nnÃ© z .env souboru
 load_dotenv()
 
 def fetch_github_repositories(topics, username):
 
-    # Získání tokenu z prostøedí
+    # ZÃ­skÃ¡nÃ­ tokenu z prostÅ™edÃ­
     token = os.getenv("GITHUB_TOKEN")
     if not token:
         print("Error: GITHUB_TOKEN not set.")
@@ -24,7 +27,7 @@ def fetch_github_repositories(topics, username):
         response = requests.get(url, headers=headers)
         response.raise_for_status()  # chcek if request was succesfull
         data = response.json()  # Loading JSON file data
-        if not isinstance(data, dict):  # Ovìøení, e data jsou slovník (JSON)
+        if not isinstance(data, dict):  # OvÄ›Å™enÃ­, Å¾e data jsou slovnÃ­k (JSON)
             print(f"Unexped data format: {data}")
             return
         
